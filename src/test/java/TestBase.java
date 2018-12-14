@@ -19,6 +19,7 @@ public class TestBase {
 
     @BeforeTest
     public static void openBrowser() {
+	System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         browser = new ChromeDriver();
         browser.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
         testRail = new TestRail();
